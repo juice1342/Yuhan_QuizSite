@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.List;
 
 import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -22,8 +23,8 @@ public class QuizName {
 	private int quiz_id;
 	private String user_id;
 	private String quiz_title;
-		
-	private Date createDate=new Date();
+	@Column(name = "create_Date")
+	private Date create_Date=new Date();
 	
 	@OneToMany(mappedBy = "quizName", cascade = CascadeType.ALL)
     private List<Quiz> quizzes;
@@ -49,10 +50,10 @@ public class QuizName {
 		this.quiz_title = quiz_title;
 	}
 	public Date getCreateDate() {
-		return createDate;
+		return create_Date;
 	}
 	public void setCreateDate(Date createDate) {
-		this.createDate = createDate;
+		this.create_Date = createDate;
 	}
 	
 	

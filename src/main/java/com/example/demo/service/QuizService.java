@@ -16,5 +16,5 @@ public interface QuizService {
 	public void updateQuizName(QuizName quizName);
 	public void deleteQuizName(QuizName quizName);
 	public QuizName getQuizName(QuizName quizName);
-	List<QuizName> getQuizNameList(QuizName quizName);
+	public List<QuizName> getQuizNameList(QuizName quizName);
 }
