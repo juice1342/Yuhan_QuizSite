@@ -1,4 +1,4 @@
-package com.example.domain;
+package com.example.demo.entity;
 
 import java.util.List;
 
@@ -81,5 +81,4 @@ public class Quiz {
 		return "Quiz [question_no=" + question_no + ", quizName=" + quizName + ", quiz=" + quiz + ", quiz_answer="
 				+ quiz_answer + ", quiz_photo_path=" + quiz_photo_path + "]";
 	}
-
 }

@@ -1,8 +1,8 @@
-package com.example.persistence;
+package com.example.demo.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.example.domain.Quiz;
+import com.example.demo.entity.Quiz;
 
 public interface QuizRepository extends JpaRepository<Quiz, Integer> {
 

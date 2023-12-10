@@ -12,9 +12,11 @@
 				<button type="submit">검색</button>
 			</form>
 		<div>
-			<a href="#대충로그인페이지" class="login">로그인</a>
-			<a href="#대충회원가입페이지" class="signup">회원가입</a>
-			</div>
+
+			<b><a th:if="${session.user == null}" class="login" href="login">로그인</a></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<b><a th:if="${session.user != null}" class="login" href="logout">로그아웃</a></b>&nbsp;&nbsp;&nbsp;&nbsp;
+			<b><a class="signup" href="signup">회원가입</a></b>
+		</div>
 		</div>
 		<div class="content">
 			<center>

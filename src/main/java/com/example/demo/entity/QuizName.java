@@ -1,4 +1,4 @@
-package com.example.domain;
+package com.example.demo.entity;
 
 import java.util.ArrayList;
 import java.util.Date;
