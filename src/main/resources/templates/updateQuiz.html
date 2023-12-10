@@ -1,28 +1,34 @@
 <!DOCTYPE html>
 <html lang="kr" xmlns:th="http://www.thymeleaf.org">
-	<link rel="stylesheet" href="/css/style.css"><head>
-	    <meta charset="UTF-8">
-		<title>Play Quiz!</title>	
-		<script>
-			function showNotification() {
-				alert("퀴즈 수정이 완료되었습니다.");
-				// 생성 완료 후 index 페이지로 이동
-				window.location.href = "/";
-			}
-		</script>
-	</head>
-	<body>
-		<div class="header">
-			<a href="index"><img src="/img/플레이퀴즈 로고.png" alt="Play Quiz!"></a>
-			<form action="/search" method="get">
-				<input type="search" name="searchbar_text" placeholder="찾는 퀴즈를 입력하세요">
-				<button type="submit">검색</button>
-			</form>
-		<div>
-			<a href="#대충로그인페이지" class="login">로그인</a>
-			<a href="#대충회원가입페이지" class="signup">회원가입</a>
+<head>
+	<link rel="stylesheet" href="/css/index.css">
+	<link rel="stylesheet" href="/css/insertQuiz.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<meta charset="UTF-8">
+	<title>Play Quiz!</title>	
+	<script>
+		function showNotification() {
+			alert("퀴즈 수정이 완료되었습니다.");
+			// 생성 완료 후 index 페이지로 이동
+			window.location.href = "/";
+		}
+	</script>
+</head>
+<body>
+	<div class="top">
+		<a href="/"><img src="/img/플레이퀴즈 로고.png" alt="Play Quiz!" class="logo"></a>		
+		<div class="search">
+			<input type="text" id="search_bar" placeholder=" 찾는 퀴즈를 입력하세요">
+			<div class="search_icon">
+				<i class="fas fa-search"></i>
 			</div>
 		</div>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<b><a th:if="${session.user != null}" class="a_logout" href="logout">로그아웃</a></b>&nbsp;&nbsp;&nbsp;&nbsp;
+	</div>
+		
+		
+		
 		<div class="content">
 			<center>
 		

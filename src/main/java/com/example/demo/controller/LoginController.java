@@ -32,7 +32,7 @@ public class LoginController {
 			 //사용자아이디와 패스워드를 세션에 저장
 			session.setAttribute("user", findUser);
 			
-			return "index2";
+			return "index";
 		}else
 			return "login";
 	}

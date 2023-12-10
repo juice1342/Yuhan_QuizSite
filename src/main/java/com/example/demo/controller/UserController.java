@@ -26,7 +26,7 @@ public class UserController {
 	@PostMapping("/signup")
     public String signup(UserSaveRequestDTO userSaveRequestDTO) {
         String userid = userService.join(userSaveRequestDTO);
-        return "index2";
+        return "index";
     }
     
 	
