@@ -1,9 +1,9 @@
-package com.example.service;
+package com.example.demo.service;
 
 import java.util.List;
 
-import com.example.entity.Quiz;
-import com.example.entity.QuizName;
+import com.example.demo.entity.Quiz;
+import com.example.demo.entity.QuizName;
 
 public interface QuizService {
 	public void insertQuiz(Quiz quiz);

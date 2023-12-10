@@ -1,4 +1,4 @@
-package com.example.controller;
+package com.example.demo.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
 
-import com.example.entity.Users;
-import com.example.service.UserService;
+import com.example.demo.entity.Users;
+import com.example.demo.service.UserService;
 
 import jakarta.servlet.http.HttpSession;
 

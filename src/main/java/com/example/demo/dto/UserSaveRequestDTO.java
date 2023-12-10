@@ -1,32 +1,19 @@
-package com.example.entity;
+package com.example.demo.dto;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.NoArgsConstructor;
 
-@Entity
-@Builder
-@AllArgsConstructor
 @NoArgsConstructor
-public class Users {
-	@Id
-//	@GeneratedValue(strategy = GenerationType.IDENTITY)
-//	private int seq;
+@AllArgsConstructor
+public class UserSaveRequestDTO {
+
 	private String userid;
 	private String password;
 	private String name;
 	private String email;
 	private String nickname;
-	private String phone_number;
+	private String phone_number;	
 	
-//	public int getSeq() {
-//		return seq;
-//	}
-//	public void setSeq(int seq) {
-//		this.seq = seq;
-//	}
 	public String getUserid() {
 		return userid;
 	}
@@ -66,17 +53,8 @@ public class Users {
 	
 	@Override
 	public String toString() {
-		return "Users [userid=" + userid + ", password=" + password + ", name=" + name + ", email=" + email
+		return "UserFormDTO [userid=" + userid + ", password=" + password + ", name=" + name + ", email=" + email
 				+ ", nickname=" + nickname + ", phone_number=" + phone_number + "]";
 	}
-	
-//	@Override
-//	public String toString() {
-//		return "Users [seq=" + seq + ", userid=" + userid + ", password=" + password + ", name=" + name + ", email="
-//				+ email + ", nickname=" + nickname + ", phone_number=" + phone_number + "]";
-//	}
-	
-	
-
 	
 }

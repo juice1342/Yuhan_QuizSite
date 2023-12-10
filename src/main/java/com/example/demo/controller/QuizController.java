@@ -1,4 +1,4 @@
-package com.example.controller;
+package com.example.demo.controller;
 
 import java.util.List;
 
@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.example.entity.Quiz;
-import com.example.entity.QuizName;
-import com.example.service.QuizServiceImpl;
+import com.example.demo.entity.Quiz;
+import com.example.demo.entity.QuizName;
+import com.example.demo.service.QuizServiceImpl;
 
 @Controller
 public class QuizController {
@@ -62,9 +62,13 @@ public class QuizController {
 
         return "forward:getQuizList";
     }
+<<<<<<< HEAD:src/main/java/com/example/controller/QuizController.java
     
     // 글 리스트
     
+=======
+//    //글 리스트
+>>>>>>> 4e85c14082d394c0794cf976b610f80df61f2bf0:src/main/java/com/example/demo/controller/QuizController.java
 //    @GetMapping("/getQuizList")
 //    public String getQuizList(Model model) {
 //        List<QuizName> quizNameList = quizService.getQuizNameList();
