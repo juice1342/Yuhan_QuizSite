@@ -31,8 +31,6 @@ public class Quiz {
     private List<String> answerList;
 	
     
-    
-    
 	public List<String> getQuizList() {
 		return quizList;
 	}

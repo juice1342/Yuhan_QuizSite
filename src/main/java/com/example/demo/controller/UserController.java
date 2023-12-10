@@ -22,12 +22,12 @@ public class UserController {
 		return "signup";
 	}
 	
-	
 	@PostMapping("/signup")
     public String signup(UserSaveRequestDTO userSaveRequestDTO) {
         String userid = userService.join(userSaveRequestDTO);
         return "index";
     }
-    
 	
 }
+
+
