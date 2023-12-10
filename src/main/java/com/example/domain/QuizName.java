@@ -1,0 +1,50 @@
+package com.example.domain;
+
+import java.util.Date;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.Data;
+
+@Data
+@Entity
+public class QuizName {
+	@Id
+	@GeneratedValue(strategy =GenerationType.IDENTITY)
+	private int quiz_id;
+	// private String user_id;
+	private String quiz_title;
+	private Date createDate=new Date();
+	public int getQuiz_id() {
+		return quiz_id;
+	}
+	public void setQuiz_id(int quiz_id) {
+		this.quiz_id = quiz_id;
+	}
+	public String getQuiz_title() {
+		return quiz_title;
+	}
+	public void setQuiz_title(String quiz_title) {
+		this.quiz_title = quiz_title;
+	}
+	public Date getCreateDate() {
+		return createDate;
+	}
+	public void setCreateDate(Date createDate) {
+		this.createDate = createDate;
+	}
+	@Override
+	public String toString() {
+		return "QuizName [quiz_id=" + quiz_id + ", quiz_title=" + quiz_title + ", createDate=" + createDate + "]";
+	}
+	
+	// private String user_id;
+	// 나중에 유저 아이디, 닉네임 넣기
+//	//private String user_id;
+//		@ManyToOne
+//		@JoinColumn(name = "user_id" )
+//		User user;
+	
+}

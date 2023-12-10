@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="kr" xmlns:th="http://www.thymeleaf.org">
+	<link rel="stylesheet" href="/css/style.css">
+	<head>
+	    <meta charset="UTF-8">
+		<title>Play Quiz!</title>		
+	</head>
+	<body>
+		<div class="header">
+			<a href="index"><img src="/img/플레이퀴즈 로고.png" alt="Play Quiz!"></a>
+			<form action="/search" method="get">
+				<input type="search" name="searchbar_text" placeholder="찾는 퀴즈를 입력하세요">
+				<button type="submit">검색</button>
+			</form>
+		<div>
+			<a href="#대충로그인페이지" class="login">로그인</a>
+			<a href="#대충회원가입페이지" class="signup">회원가입</a>
+			</div>
+		</div>
+		<div class="content">
+			<center>
+			<form action="updateBoard" method="post">
+	       <input name="seq" type ="hidden" th:value ="${board.seq}">
+	          <table border="1"cellspacing=0 cellpadding= 0>
+			   <tr>
+                <th>제목</th>
+                <td><input th:text="${board.title}"size=20/></td></tr>
+                <tr> 
+				<th>작성자</th>
+                <td><input th:text="${board.writer}"size=20/></td></tr>
+                <tr> 	
+				 <th>내용</th>
+                <td><textarea name="content"cols="30" rows="10"
+                      th:text="${board.content}"></textarea></td></tr>
+                <tr>
+                <th>등록일</th>
+                <td th:text="${#dates.format(board.createDate,'yyyy-MM-dd')}"></td>
+               </tr>
+               <tr><th>조회수</th>
+                   <td th:text="${board.cnt}"></td>
+               </tr>  
+	<tr>
+	    <td colspan="2" align="center">
+                  <input type="submit" value ="수정하기"</td>	</tr>     
+			  </table>
+		  </form>
+			
+        	</center>
+		</div>
+		<div class="footer">
+			
+		</div>
+	</body>
+</html>
