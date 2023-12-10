@@ -1,14 +1,14 @@
-package com.example.Service;
+package com.example.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.domain.Quiz;
-import com.example.domain.QuizName;
-import com.example.persistence.QuizNameRepository;
-import com.example.persistence.QuizRepository;
+import com.example.entity.Quiz;
+import com.example.entity.QuizName;
+import com.example.repository.QuizNameRepository;
+import com.example.repository.QuizRepository;
 
 @Service
 public class QuizServiceImpl {

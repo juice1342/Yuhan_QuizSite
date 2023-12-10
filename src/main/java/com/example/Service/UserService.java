@@ -1,7 +1,7 @@
-package com.example.demo.service;
+package com.example.service;
 
-import com.example.demo.dto.UserSaveRequestDTO;
-import com.example.demo.entity.Users;
+import com.example.dto.UserSaveRequestDTO;
+import com.example.entity.Users;
 
 public interface UserService {
 	String join(UserSaveRequestDTO userSaveRequestDTO);

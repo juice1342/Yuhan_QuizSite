@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+package com.example.controller;
 
 import java.util.List;
 
@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.example.demo.entity.Quiz;
-import com.example.demo.entity.QuizName;
-import com.example.demo.service.QuizServiceImpl;
+import com.example.entity.Quiz;
+import com.example.entity.QuizName;
+import com.example.service.QuizServiceImpl;
 
 @Controller
 public class QuizController {
@@ -61,12 +61,9 @@ public class QuizController {
 
         return "forward:getQuizList";
     }
-<<<<<<< HEAD:src/main/java/com/example/controller/QuizController.java
-
     //글 상세 조회
-=======
+
 	//글 상세 조회
->>>>>>> a09f3985e91e2fc3bcdc3e33cebaf0ae423e0aaa:src/main/java/com/example/demo/controller/QuizController.java
     @GetMapping("/getQuiz")
     public String getQuiz(Quiz quiz, QuizName quizname, Model model) {
         model.addAttribute("quizname", quizService.getQuizName(quizname));
