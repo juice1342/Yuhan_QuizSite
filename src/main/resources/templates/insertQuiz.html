@@ -2,7 +2,14 @@
 <html lang="kr" xmlns:th="http://www.thymeleaf.org">
 	<link rel="stylesheet" href="/css/style.css"><head>
 	    <meta charset="UTF-8">
-		<title>Play Quiz!</title>		
+		<title>Play Quiz!</title>	
+		<script>
+			function showNotification() {
+				alert("퀴즈 생성이 완료되었습니다.");
+				// 생성 완료 후 index 페이지로 이동
+				window.location.href = "/index";
+			}
+		</script>
 	</head>
 	<body>
 		<div class="header">
@@ -18,41 +25,42 @@
 		</div>
 		<div class="content">
 			<center>
-			<form action="insertQuiz" method="post"
-			  enctype="multipart/form-data">
-			  
-			  <label for="quizTitle">퀴즈 제목: </label>
-		        <input type="text" id="quizTitle" name="quiz_title" required><br>
 		
-		        <label for="quizQuestion">1 퀴즈 문제: </label>
-		        <textarea id="quizQuestion" name="quiz" rows="4" required></textarea><br>
-		<label for="quizAnswer">퀴즈 정답: </label>
-		        <input type="text" id="quizAnswer" name="quiz_answer" required><br>
-				
-				<label for="quizQuestion">2 퀴즈 문제: </label>
-		        <textarea id="quizQuestion" name="quiz" rows="4" required></textarea><br>
-		<label for="quizAnswer">퀴즈 정답: </label>
-		        <input type="text" id="quizAnswer" name="quiz_answer" required><br>
-				
-				<label for="quizQuestion">3 퀴즈 문제: </label>
-		        <textarea id="quizQuestion" name="quiz" rows="4" required></textarea><br>
-		<label for="quizAnswer">퀴즈 정답: </label>
-		        <input type="text" id="quizAnswer" name="quiz_answer" required><br>
-				
-				<label for="quizQuestion">4 퀴즈 문제: </label>
-		        <textarea id="quizQuestion" name="quiz" rows="4" required></textarea><br>
-		<label for="quizAnswer">퀴즈 정답: </label>
-		        <input type="text" id="quizAnswer" name="quiz_answer" required><br>
-				
-				<label for="quizQuestion">5 퀴즈 문제: </label>
-		        <textarea id="quizQuestion" name="quiz" rows="4" required></textarea><br>
-		<label for="quizAnswer">퀴즈 정답: </label>
-		        <input type="text" id="quizAnswer" name="quiz_answer" required><br>
-				
-				
-		        <button type="submit">퀴즈 생성</button>
-			  
-			 </form>
+		<form action="insertQuiz" method="post" enctype="multipart/form-data">
+		    <label for="quizTitle">퀴즈 제목: </label>
+    		<input type="text" id="quizTitle" name="quizname" required><br>
+
+		    <!-- 5문제 입력 -->	
+		    <label for="quizQuestion1">1 퀴즈 문제: </label>
+		    <textarea id="quizQuestion1" name="quizList[0]" rows="4" required></textarea><br>
+		    <label for="quizAnswer1">퀴즈 정답: </label>
+		    <input type="text" id="quizAnswer1" name="answerList[0]" required><br>
+		
+		    <!-- 2~5번째 문제, 정답 입력 (반복) -->
+		    <label for="quizQuestion2">2 퀴즈 문제: </label>
+		    <textarea id="quizQuestion2" name="quizList[0]" rows="4" required></textarea><br>
+		    <label for="quizAnswer2">퀴즈 정답: </label>
+		    <input type="text" id="quizAnswer2" name="answerList[0]" required><br>
+		    
+		    <label for="quizQuestion3">3 퀴즈 문제: </label>
+		    <textarea id="quizQuestion3" name="quizList[0]" rows="4" required></textarea><br>
+		    <label for="quizAnswer3">퀴즈 정답: </label>
+		    <input type="text" id="quizAnswer3" name="answerList[0]" required><br>
+		    
+		    <label for="quizQuestion4">4 퀴즈 문제: </label>
+		    <textarea id="quizQuestion4" name="quizList[0]" rows="4" required></textarea><br>
+		    <label for="quizAnswer4">퀴즈 정답: </label>
+		    <input type="text" id="quizAnswer4" name="answerList[0]" required><br>
+		    
+		    <label for="quizQuestion5">5 퀴즈 문제: </label>
+		    <textarea id="quizQuestion5" name="quizList[0]" rows="4" required></textarea><br>
+		    <label for="quizAnswer5">퀴즈 정답: </label>
+		    <input type="text" id="quizAnswer5" name="answerList[0]" required><br>
+		    <!-- ... -->
+
+
+    <button type="submit">퀴즈 생성</button>
+</form>
         </center>
 		</div>
 		<div class="footer">

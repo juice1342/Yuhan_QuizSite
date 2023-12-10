@@ -1,5 +1,8 @@
 package com.example.domain;
 
+import java.util.List;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -15,13 +18,33 @@ public class Quiz {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int question_no;
 	
-	@ManyToOne
-	@JoinColumn(name="quiz_id")
-	QuizName quizName;
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "quiz_id")
+	private QuizName quizName;
 	
 	private String quiz;
 	private String quiz_answer;
 	private String quiz_photo_path;
+	
+	private List<String> quizList;
+    private List<String> answerList;
+	
+    
+    
+    
+	public List<String> getQuizList() {
+		return quizList;
+	}
+	public void setQuizList(List<String> quizList) {
+		this.quizList = quizList;
+	}
+	public List<String> getAnswerList() {
+		return answerList;
+	}
+	public void setAnswerList(List<String> answerList) {
+		this.answerList = answerList;
+	}
+	
 	
 	public int getQuestion_no() {
 		return question_no;

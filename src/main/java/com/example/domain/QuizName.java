@@ -1,11 +1,15 @@
 package com.example.domain;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import lombok.Data;
 
 @Data
@@ -16,7 +20,20 @@ public class QuizName {
 	private int quiz_id;
 	// private String user_id;
 	private String quiz_title;
+		
 	private Date createDate=new Date();
+	
+	@OneToMany(mappedBy = "quizName", cascade = CascadeType.ALL)
+    private List<Quiz> quizzes;
+
+    public void setQuiz(Quiz quiz) {
+        if (quizzes == null) {
+            quizzes = new ArrayList<>();
+        }
+        quizzes.add(quiz);
+        quiz.setQuizName(this);
+    }
+	
 	public int getQuiz_id() {
 		return quiz_id;
 	}
