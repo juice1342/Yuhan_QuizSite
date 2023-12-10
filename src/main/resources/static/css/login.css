@@ -1,0 +1,89 @@
+.body_wrapper {
+	margin: 0;
+	padding-top: 37px;
+}
+
+.login_wrapper { 
+	background-color: rgb(255, 255, 255);
+	width:550px;
+	height:450px;
+	position:relative;
+	border-radius: 8px;
+	margin:0 auto;
+}
+
+h1 {
+	position: relative;
+	letter-spacing:10px;
+	color:rgb(70, 70, 70);
+	text-align: center;
+	font-size: 45px;
+	margin-bottom: 30px;
+}
+
+a {
+	text-decoration-line: none;
+}
+
+.login_form {
+	position: relative;
+	text-align: center;
+	padding-bottom: 40px;
+	padding-top: 35px;
+}
+
+label {
+	margin-top: 50px;
+	font-size:22px;
+}
+
+label[for="userid"] {
+	margin-right: 238px;
+	font-size: 24px;
+	letter-spacing:3px;
+}
+
+label[for="password"] {
+	margin-right: 210px;
+	font-size: 24px;
+	letter-spacing:3px;
+}
+
+input[id="userid"], input[id="password"] {
+	margin-top: 10px;
+	margin-bottom: 20px;
+	width: 300px;
+	height: 35px;
+	border-radius: 5px;
+	font-size: 25px;
+	border-color: rgb(128, 128, 128);
+}
+
+button[id="login_button"] {
+	background-color: rgb(111, 198, 255);
+	margin-top: 10px;
+	margin-bottom: 5px;
+	width: 308px;
+	height: 40px;
+	color: white;
+	border-radius: 5px;
+	font-size: 23px;
+	letter-spacing:5px;
+	border: none;
+}
+
+hr {
+	margin-bottom: 18px;
+	position: relative;
+	width: 410px;
+}
+
+table {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.aa_id, .aa_ps, .aa_signup {
+	color:black;
+	font-size: 18px;
+}

@@ -1,0 +1,96 @@
+html, body {
+	height: 100%;
+	margin: 0 auto;
+	padding: 0px;
+	background-color: rgb(179, 224, 255);
+
+}
+
+.top {
+	top: 0px;
+	height: 90px;
+	background-color: rgb(219, 241, 255);
+}
+
+h2 {
+	position: absolute;
+	margin: 0;
+	font-size: 65px;
+	color: white;
+	text-shadow: 1px 1px 1px rgb(37, 37, 37);
+	letter-spacing: 2px;
+	top: -4px;
+	left: 170px;
+}
+
+.search {
+	position: absolute;
+	width: 500px;
+	height: 33px;
+	top: 29px;
+	left: 600px;
+}
+
+#search_bar {
+	width: 500px;
+	height: 33px;
+	left: 0;
+	position: absolute;
+	border:0 solid black;
+	border-radius: 7px;
+	box-shadow: 1px 1px 1px rgb(192, 192, 192);
+	font-size: 20px;
+}
+
+.search_icon {
+	width: 30px;
+	height: 33px;
+	position: absolute;
+	right: 0px;
+	font-size: 23px;
+	color: rgb(45, 45, 45);
+}
+
+.a_login, .a_signup {
+	position: relative;
+	text-decoration-line: none;
+	font-size: 25px;
+	top: 27px;
+	left: 1350px;
+	letter-spacing:1px;
+	color:rgb(128, 128, 128);
+}
+
+.a_logout {
+	position: relative;
+	text-decoration-line: none;
+	font-size: 25px;
+	top: 27px;
+	left: 1310px;
+	letter-spacing:1px;
+	color:rgb(128, 128, 128);
+}
+
+.plus {
+	position: fixed;
+	right: 0px;
+	bottom: 0;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	width: 115px;
+	height: 115px;
+	background-color: rgb(128, 204, 255);
+	box-shadow: 1.3px 1.3px 1.3px rgb(98, 192, 255);
+	border-radius: 100px;
+}
+
+p[class="create_quiz"] {
+	position: fixed;
+	right: 0px;
+	bottom: 0;
+	font-size: 140px;
+	color: white;
+	margin: 0;
+	margin-right: 26px;
+	margin-bottom: 2px;
+}
