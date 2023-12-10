@@ -1,13 +1,13 @@
-package com.example.service;
+package com.example.demo.service;
 
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.dto.UserSaveRequestDTO;
-import com.example.entity.Users;
-import com.example.repository.UserRepository;
+import com.example.demo.dto.UserSaveRequestDTO;
+import com.example.demo.entity.Users;
+import com.example.demo.repository.UserRepository;
 
 import lombok.RequiredArgsConstructor;
 

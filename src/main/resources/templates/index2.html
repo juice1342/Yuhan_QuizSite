@@ -9,21 +9,50 @@
 </head>
 <body>
 	<div class="top">
-		<a href="/"><h2>Quiz</h2></a>
+		<a href="/"><img src="/img/플레이퀴즈 로고.png" alt="Play Quiz!" class="logo"></a>
+		
 		<div class="search">
-			<input type="text" id="search_bar">
+			<input type="text" id="search_bar" placeholder=" 찾는 퀴즈를 입력하세요">
 			<div class="search_icon">
 				<i class="fas fa-search"></i>
 			</div>
 		</div>
 		<b><a th:if="${session.user == null}" class="a_login" href="login">로그인</a></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		<b><a th:if="${session.user != null}" class="a_logout" href="logout">로그아웃</a></b>&nbsp;&nbsp;&nbsp;&nbsp;
-		<b><a class="a_signup" href="signup">회원가입</a></b>
+		<b><a th:if="${session.user == null}" class="a_signup" href="signup">회원가입</a></b>
 	</div>
 	
 	<div class="plus">
-		<a href="createQuiz"><p class="create_quiz">+</p></a>
+		<h3>퀴즈 만들기</h3>
+		<a th:if="${session.user == null}" href="login"><p class="create_quiz">+</p></a>
+		<a th:if="${session.user != null}" href="insertQuiz"><p class="create_quiz">+</p></a>
 	</div>
-	
+	    
+
+	<div class="content">
+		<center>
+			<div class="content_table">
+				<table border="1"cellpadding =0 cellspacing="0">
+					<tr>
+						<th width=65 height="33">번호</th>
+						<th width=660>제목</th>
+						<th width=185>작성자</th>
+						<th width=210>등록일</th>
+					</tr>
+					<tr th:each="quizName, state:${quizNameList}">
+						<td th:text="${quizName.id}"></td>
+						<td>
+							<a th:href="@{/getQuiz(quizName.id=${quizName.id})}" th:text="${quizName.title}"></a>
+						</td>  
+						<td th:text="${quizName.user_id}"></td>
+						<td th:text="${#dates.format(quizName.createDate,'yyyy-MM-dd')}"></td>
+	            	</tr>     
+	        	</table>
+	        </div>
+        </center>
+	</div>
+	<div class="footer">
+			
+	</div>
 </body>
 </html>

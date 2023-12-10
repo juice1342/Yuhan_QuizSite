@@ -15,7 +15,7 @@
 
 			<b><a th:if="${session.user == null}" class="login" href="login">로그인</a></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<b><a th:if="${session.user != null}" class="login" href="logout">로그아웃</a></b>&nbsp;&nbsp;&nbsp;&nbsp;
-			<b><a class="signup" href="signup">회원가입</a></b>
+			<b><a th:if="${session.user == null}" class="a_signup" href="signup">회원가입</a></b>
 		</div>
 		</div>
 		<div class="content">
@@ -40,7 +40,8 @@
             </tr>     
         </table>   <br>
         </center>
-        <a href="insertQuiz">퀴즈 만들기</a>
+        <a th:if="${session.user == null}" href="login">퀴즈 만들기</a>
+		<a th:if="${session.user != null}" href="insertQuiz">퀴즈 만들기</a>
 		</div>
 		<div class="footer">
 			

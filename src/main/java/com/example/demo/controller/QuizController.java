@@ -1,4 +1,4 @@
-package com.example.controller;
+package com.example.demo.controller;
 
 import java.util.List;
 
@@ -11,19 +11,19 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.example.entity.Quiz;
-import com.example.entity.QuizName;
-import com.example.service.QuizServiceImpl;
+import com.example.demo.entity.Quiz;
+import com.example.demo.entity.QuizName;
+import com.example.demo.service.QuizServiceImpl;
 
 @Controller
 public class QuizController {
 	@Autowired
     private QuizServiceImpl quizService;
 
-    @GetMapping("/index")
-    public String indexView() {
-        return "index";
-    }
+//    @GetMapping("/index")
+//    public String indexView() {
+//        return "index";
+//    }
 
     // 글등록 화면으로 이동
     @GetMapping("/insertQuiz")//get방식

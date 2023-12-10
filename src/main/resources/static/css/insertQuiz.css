@@ -1,0 +1,87 @@
+.content_insertQuiz {
+	width: 1100px;
+	height: 1180px;
+	background-color: white;
+	margin:0 auto;
+	border-radius: 7px;
+	margin-top: 20px;
+}
+
+.insertQuiz_form {
+	position: relative;
+	width: 1000px;
+	height: 1160px;
+	/*background-color: rgb(255, 181, 218);*/
+	margin:0 auto;
+	padding-top: 20px;
+}
+
+h1 {
+	position: relative;
+	top: 10px;
+	left: 40px;
+	letter-spacing:2px;
+	color: rgb(70, 70, 70);
+}
+
+hr {
+	width: 1000px;	
+}
+
+input {
+	position: relative;
+	width: 750px;
+	height: 35px;
+	margin-bottom: 15px;
+	font-size: 23px;
+	left: 40px;
+}
+
+input[id="title"] {
+	margin-bottom: 33px;
+	left: 56px;
+}
+
+textarea {
+	position: relative;
+	width: 620px;
+	height: 100px;
+	left: 56px;
+	margin-bottom: 25px;
+	font-size: 23px;
+	resize: none;
+}
+
+label {
+	position: relative;
+	font-size: 24px;
+	left: 30px;
+	letter-spacing:2px;
+}
+
+label[for="title"] {
+	position: relative;
+	left: 35px;
+	font-size: 23px;
+}
+
+label[for="question"] {
+	position: relative;
+	left: 35px;
+	top: -101px;
+	font-size: 23px;
+}
+
+button {
+	position: absolute;
+	width: 140px;
+	height: 40px;
+	right: 0;
+	bottom: 15px;
+	background-color: rgb(111, 198, 255);
+	color: white;
+	border: none;
+	font-size: 23px;
+	letter-spacing:3px;
+	border-radius: 5px;
+}
