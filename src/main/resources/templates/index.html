@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="kr" xmlns:th="http://www.thymeleaf.org">
+	<link rel="stylesheet" href="/css/style.css"><head>
+	    <meta charset="UTF-8">
+		<title>Play Quiz!</title>		
+	</head>
+	<body>
+		<div class="header">
+			<a href="index"><img src="/img/플레이퀴즈 로고.png" alt="Play Quiz!"></a>
+			<form action="/search" method="get">
+				<input type="search" name="searchbar_text" placeholder="찾는 퀴즈를 입력하세요">
+				<button type="submit">검색</button>
+			</form>
+		<div>
+
+			<b><a th:if="${session.user == null}" class="login" href="login">로그인</a></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<b><a th:if="${session.user != null}" class="login" href="logout">로그아웃</a></b>&nbsp;&nbsp;&nbsp;&nbsp;
+			<b><a class="signup" href="signup">회원가입</a></b>
+		</div>
+		</div>
+		<div class="content">
+			<center>
+			<table border="1"cellpadding =0 cellspacing="0">
+				<tr>
+					<th width =50>번호</th>
+					<th width =80>제목</th>
+					<th width =70>작성자</th>
+					<th width =200>등록일</th>
+				</tr>
+			<tr th:each="quizName, state:${quizNameList}">
+               
+                <td th:text="${quizName.id}"></td>
+                
+	            <td><a th:href="@{/getQuiz(quizName.id=${quizName.id})}" 
+	                   th:text="${quizName.title}"></a></td>  
+	                                
+                <td th:text="${quizName.user_id}"></td>
+                
+                <td th:text="${#dates.format(quizName.createDate,'yyyy-MM-dd')}"></td>
+            </tr>     
+        </table>   <br>
+        </center>
+		</div>
+		<div class="footer">
+			
+		</div>
+	</body>
+</html>

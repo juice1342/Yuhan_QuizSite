@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="kr" xmlns:th="http://www.thymeleaf.org">
+	<link rel="stylesheet" href="/css/style.css"><head>
+	    <meta charset="UTF-8">
+		<title>Play Quiz!</title>		
+	</head>
+	<body>
+		<div class="header">
+			<img src="/img/플레이퀴즈 로고.png" alt="Play Quiz!">
+			<form action="/search" method="get">
+				<input type="search" name="searchbar_text" placeholder="찾는 퀴즈를 입력하세요">
+				<button type="submit">검색</button>
+			</form>
+		<div>
+			<a href="#대충로그인페이지" class="login">로그인</a>
+			<a href="#대충회원가입페이지" class="signup">회원가입</a>
+			</div>
+		</div>
+		<div class="content">
+			<center>
+			<form action="insertQuiz" method="post"
+			  enctype="multipart/form-data">
+			  
+			  <label for="quizTitle">퀴즈 제목: </label>
+		        <input type="text" id="quizTitle" name="quiz_title" required><br>
+		
+		        <label for="quizQuestion">1 퀴즈 문제: </label>
+		        <textarea id="quizQuestion" name="quiz" rows="4" required></textarea><br>
+		<label for="quizAnswer">퀴즈 정답: </label>
+		        <input type="text" id="quizAnswer" name="quiz_answer" required><br>
+				
+				<label for="quizQuestion">2 퀴즈 문제: </label>
+		        <textarea id="quizQuestion" name="quiz" rows="4" required></textarea><br>
+		<label for="quizAnswer">퀴즈 정답: </label>
+		        <input type="text" id="quizAnswer" name="quiz_answer" required><br>
+				
+				<label for="quizQuestion">3 퀴즈 문제: </label>
+		        <textarea id="quizQuestion" name="quiz" rows="4" required></textarea><br>
+		<label for="quizAnswer">퀴즈 정답: </label>
+		        <input type="text" id="quizAnswer" name="quiz_answer" required><br>
+				
+				<label for="quizQuestion">4 퀴즈 문제: </label>
+		        <textarea id="quizQuestion" name="quiz" rows="4" required></textarea><br>
+		<label for="quizAnswer">퀴즈 정답: </label>
+		        <input type="text" id="quizAnswer" name="quiz_answer" required><br>
+				
+				<label for="quizQuestion">5 퀴즈 문제: </label>
+		        <textarea id="quizQuestion" name="quiz" rows="4" required></textarea><br>
+		<label for="quizAnswer">퀴즈 정답: </label>
+		        <input type="text" id="quizAnswer" name="quiz_answer" required><br>
+				
+				
+		        <button type="submit">퀴즈 생성</button>
+			  
+			 </form>
+        </center>
+		</div>
+		<div class="footer">
+			
+		</div>
+	</body>
+</html>
