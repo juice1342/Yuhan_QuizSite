@@ -13,7 +13,7 @@
 	</head>
 	<body>
 		<div class="header">
-			<img src="/img/플레이퀴즈 로고.png" alt="Play Quiz!">
+			<a href="index"><img src="/img/플레이퀴즈 로고.png" alt="Play Quiz!"></a>
 			<form action="/search" method="get">
 				<input type="search" name="searchbar_text" placeholder="찾는 퀴즈를 입력하세요">
 				<button type="submit">검색</button>
@@ -26,7 +26,7 @@
 		<div class="content">
 			<center>
 		
-		<form action="insertQuiz" method="post" enctype="multipart/form-data">
+		<form action="insertQuiz" method="post">
 		    <label for="quizTitle">퀴즈 제목: </label>
     		<input type="text" id="quizTitle" name="quizname" required><br>
 
@@ -59,7 +59,7 @@
 		    <!-- ... -->
 
 
-    <button type="submit">퀴즈 생성</button>
+    <button type="submit" onclick="showNotification()">퀴즈 생성</button>
 </form>
         </center>
 		</div>

@@ -10,15 +10,17 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
 import lombok.Data;
 
 @Data
 @Entity
+@Table(name = "QUIZ_NAME")
 public class QuizName {
 	@Id
 	@GeneratedValue(strategy =GenerationType.IDENTITY)
 	private int quiz_id;
-	// private String user_id;
+	private String user_id;
 	private String quiz_title;
 		
 	private Date createDate=new Date();
@@ -52,10 +54,7 @@ public class QuizName {
 	public void setCreateDate(Date createDate) {
 		this.createDate = createDate;
 	}
-	@Override
-	public String toString() {
-		return "QuizName [quiz_id=" + quiz_id + ", quiz_title=" + quiz_title + ", createDate=" + createDate + "]";
-	}
+	
 	
 	// private String user_id;
 	// 나중에 유저 아이디, 닉네임 넣기

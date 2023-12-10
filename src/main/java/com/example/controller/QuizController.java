@@ -9,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.entity.Quiz;
@@ -20,7 +21,7 @@ public class QuizController {
 	@Autowired
     private QuizServiceImpl quizService;
 
-    @GetMapping("/index")
+	@GetMapping("/index")
     public String indexView() {
         return "index";
     }
@@ -53,16 +54,29 @@ public class QuizController {
             quizS.setQuizName(quizname);
 
             // insertQuiz 메서드가 단일 Quiz 객체를 처리
-            quizService.insertQuiz(quizS);
+            quizService.insertQuiz(quizS, quizTitle);
         }
 
         // 퀴즈 이름을 저장
-        quizService.insertQuizName(quizname);
+        // quizService.insertQuizName(quizname);
 
         return "forward:getQuizList";
     }
-    //글 상세 조회
-
+    // 글 리스트
+//    @GetMapping("/getQuizList")
+//    public String getQuizList(Model model) {
+//        List<QuizName> quizNameList = quizService.getQuizNameList();
+//        System.out.println("QuizName List: " + quizNameList);
+//        model.addAttribute("quizNameList", quizNameList);
+//        return "index";
+//    }
+    
+    @RequestMapping("/getQuizNameList")
+    public String getQuizNameList(QuizName quizname, Model model) {
+        model.addAttribute("quiznameList", quizService.getQuizNameList(quizname));
+        return "index";
+    }
+    
 	//글 상세 조회
     @GetMapping("/getQuiz")
     public String getQuiz(Quiz quiz, QuizName quizname, Model model) {
