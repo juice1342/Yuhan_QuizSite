@@ -31,42 +31,43 @@
 		
 			<div class="insertQuiz_form">
 				<form action="insertQuiz" method="post" enctype="multipart/form-data">
-					<h1>퀴즈 생성</h1><hr><br>
+					<h1>퀴즈 생성</h1><br><hr><br>
 					
 				    <label for="quizTitle">퀴즈 제목 </label>
-		    		<input type="text" id="quizTitle" name="quizname" required><br>
+		    		<input type="text" id="quizTitle" name="quizname" required><br><br>
 		
-				    <!-- 5문제 입력 -->	
-				    <label for="quizQuestion1">1. 퀴즈 문제 </label>
-				    <textarea id="quizQuestion1" name="quizList[0]" rows="4" required></textarea><br>
-				    <label for="quizAnswer1">1번 정답 </label>
-				    <input type="text" id="quizAnswer1" name="answerList[0]" required><br>
-				
-				    <!-- 2~5번째 문제, 정답 입력 (반복) -->
-				    <label for="quizQuestion2">2. 퀴즈 문제 </label>
-				    <textarea id="quizQuestion2" name="quizList[0]" rows="4" required></textarea><br>
-				    <label for="quizAnswer2">2번 정답 </label>
-				    <input type="text" id="quizAnswer2" name="answerList[0]" required><br>
-				    
-				    <label for="quizQuestion3">3. 퀴즈 문제 </label>
-				    <textarea id="quizQuestion3" name="quizList[0]" rows="4" required></textarea><br>
-				    <label for="quizAnswer3">3번 정답 </label>
-				    <input type="text" id="quizAnswer3" name="answerList[0]" required><br>
-				    
-				    <label for="quizQuestion4">4. 퀴즈 문제 </label>
-				    <textarea id="quizQuestion4" name="quizList[0]" rows="4" required></textarea><br>
-				    <label for="quizAnswer4">4번 정답 </label>
-				    <input type="text" id="quizAnswer4" name="answerList[0]" required><br>
-				    
-				    <label for="quizQuestion5">5. 퀴즈 문제 </label>
-				    <textarea id="quizQuestion5" name="quizList[0]" rows="4" required></textarea><br>
-				    <label for="quizAnswer5">5번 정답 </label>
-				    <input type="text" id="quizAnswer5" name="answerList[0]" required><br>
-				    <!-- ... -->
-		
+					<div class="quiz_qna">
+					    <!-- 5문제 입력 -->	
+					    <label for="quizQuestion1">1. 퀴즈 문제 </label>
+					    <textarea id="quizQuestion1" name="quizList[0]" rows="4" required></textarea><br>
+					    <label for="quizAnswer1">1번 정답 </label>
+					    <input type="text" id="quizAnswer1" name="answerList[0]" required><br>
+					
+					    <!-- 2~5번째 문제, 정답 입력 (반복) -->
+					    <label for="quizQuestion2">2. 퀴즈 문제 </label>
+					    <textarea id="quizQuestion2" name="quizList[0]" rows="4" required></textarea><br>
+					    <label for="quizAnswer2">2번 정답 </label>
+					    <input type="text" id="quizAnswer2" name="answerList[0]" required><br>
+					    
+					    <label for="quizQuestion3">3. 퀴즈 문제 </label>
+					    <textarea id="quizQuestion3" name="quizList[0]" rows="4" required></textarea><br>
+					    <label for="quizAnswer3">3번 정답 </label>
+					    <input type="text" id="quizAnswer3" name="answerList[0]" required><br>
+					    
+					    <label for="quizQuestion4">4. 퀴즈 문제 </label>
+					    <textarea id="quizQuestion4" name="quizList[0]" rows="4" required></textarea><br>
+					    <label for="quizAnswer4">4번 정답 </label>
+					    <input type="text" id="quizAnswer4" name="answerList[0]" required><br>
+					    
+					    <label for="quizQuestion5">5. 퀴즈 문제 </label>
+					    <textarea id="quizQuestion5" name="quizList[0]" rows="4" required></textarea><br>
+					    <label for="quizAnswer5">5번 정답 </label>
+					    <input type="text" id="quizAnswer5" name="answerList[0]" required><br>
+					    <!-- ... -->
+						</div>
 		    		<button type="submit">퀴즈 생성</button>
 				</form>
-			</div>
+			</div><br>
     	
 	</div>
 	<div class="footer">

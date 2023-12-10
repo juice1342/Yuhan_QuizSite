@@ -9,22 +9,23 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
 import lombok.Data;
 
 @Data
 @Entity
+@Table(name = "QUIZ")
 public class Quiz {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int question_no;
 	
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne	// (cascade = CascadeType.ALL)
 	@JoinColumn(name = "quiz_id")
 	private QuizName quizName;
 	
 	private String quiz;
 	private String quiz_answer;
-	private String quiz_photo_path;
 	
 	private List<String> quizList;
     private List<String> answerList;
@@ -70,15 +71,9 @@ public class Quiz {
 	public void setQuiz_answer(String quiz_answer) {
 		this.quiz_answer = quiz_answer;
 	}
-	public String getQuiz_photo_path() {
-		return quiz_photo_path;
-	}
-	public void setQuiz_photo_path(String quiz_photo_path) {
-		this.quiz_photo_path = quiz_photo_path;
-	}
 	@Override
 	public String toString() {
 		return "Quiz [question_no=" + question_no + ", quizName=" + quizName + ", quiz=" + quiz + ", quiz_answer="
-				+ quiz_answer + ", quiz_photo_path=" + quiz_photo_path + "]";
+				+ quiz_answer + ", quiz_photo_path=" + "]";
 	}
 }

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="kr" xmlns:th="http://www.thymeleaf.org">
+	<link rel="stylesheet" href="/css/style.css"><head>
+	    <meta charset="UTF-8">
+		<title>Play Quiz!</title>	
+		<script>
+			function showNotification() {
+				alert("퀴즈 수정이 완료되었습니다.");
+				// 생성 완료 후 index 페이지로 이동
+				window.location.href = "/";
+			}
+		</script>
+	</head>
+	<body>
+		<div class="header">
+			<a href="index"><img src="/img/플레이퀴즈 로고.png" alt="Play Quiz!"></a>
+			<form action="/search" method="get">
+				<input type="search" name="searchbar_text" placeholder="찾는 퀴즈를 입력하세요">
+				<button type="submit">검색</button>
+			</form>
+		<div>
+			<a href="#대충로그인페이지" class="login">로그인</a>
+			<a href="#대충회원가입페이지" class="signup">회원가입</a>
+			</div>
+		</div>
+		<div class="content">
+			<center>
+		
+		<form action="updateQuiz" method="post">
+		    <input name="quiz_id" type="hidden" th:value="${quiz.question_no}">
+		    <label for="quizTitle">퀴즈 제목: </label>
+		    <input type="text" id="quizTitle" name="quizname" th:value="${quiz.quizName.quiz_title}" ><br>
+
+		    <!-- 5문제 입력 -->	
+		    <label for="quizQuestion1">1 퀴즈 문제: </label>
+		    <textarea th:text="${quiz.quizList[0]}" id="quizQuestion1" name="quizList[0]" rows="4" readonly></textarea><br>
+		    <label for="quizAnswer1">퀴즈 정답: </label>
+		    <input type="text" th:value="${quiz.answerList[0]}" id="quizAnswer1" name="answerList[0]" required><br>
+		
+		    <!-- 2~5번째 문제, 정답 입력 (반복) -->
+		    <label for="quizQuestion2">2 퀴즈 문제: </label>
+		    <textarea th:text="${quiz.quizList[1]}" id="quizQuestion2" name="quizList[0]" rows="4" required></textarea><br>
+		    <label for="quizAnswer2">퀴즈 정답: </label>
+		    <input type="text" th:value="${quiz.answerList[1]}" id="quizAnswer2" name="answerList[0]" required><br>
+		    
+		    <label for="quizQuestion3">3 퀴즈 문제: </label>
+		    <textarea th:text="${quiz.quizList[2]}" id="quizQuestion3" name="quizList[0]" rows="4" required></textarea><br>
+		    <label for="quizAnswer3">퀴즈 정답: </label>
+		    <input type="text" th:text="${quiz.answerList[2]}" id="quizAnswer3" name="answerList[0]" required><br>
+		    
+		    <label for="quizQuestion4">4 퀴즈 문제: </label>
+		    <textarea th:text="${quiz.quizList[3]}" id="quizQuestion4" name="quizList[0]" rows="4" required></textarea><br>
+		    <label for="quizAnswer4">퀴즈 정답: </label>
+		    <input type="text" th:text="${quiz.quizList[3]}" id="quizAnswer4" name="answerList[0]" required><br>
+		    
+		    <label for="quizQuestion5">5 퀴즈 문제: </label>
+		    <textarea th:text="${quiz.quizList[4]}" id="quizQuestion5" name="quizList[0]" rows="4" required></textarea><br>
+		    <label for="quizAnswer5">퀴즈 정답: </label>
+		    <input type="text" th:text="${quiz.quizList[4]}" id="quizAnswer5" name="answerList[0]" required><br>
+		    <!-- ... -->
+
+
+    <button type="submit" onclick="showNotification()">퀴즈 수정</button>
+</form>
+        </center>
+		</div>
+		<div class="footer">
+			
+		</div>
+	</body>
+</html>

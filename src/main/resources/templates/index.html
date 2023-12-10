@@ -16,6 +16,7 @@
 			<b><a th:if="${session.user == null}" class="login" href="login">로그인</a></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<b><a th:if="${session.user != null}" class="login" href="logout">로그아웃</a></b>&nbsp;&nbsp;&nbsp;&nbsp;
 			<b><a th:if="${session.user == null}" class="a_signup" href="signup">회원가입</a></b>
+
 		</div>
 		</div>
 		<div class="content">
@@ -27,17 +28,13 @@
 					<th width =70>작성자</th>
 					<th width =200>등록일</th>
 				</tr>
-			<tr th:each="quizName, state:${quizNameList}">
-               
-                <td th:text="${quizName.id}"></td>
-                
-	            <td><a th:href="@{/getQuiz(quizName.id=${quizName.id})}" 
-	                   th:text="${quizName.title}"></a></td>  
-	                                
-                <td th:text="${quizName.user_id}"></td>
-                
-                <td th:text="${#dates.format(quizName.createDate,'yyyy-MM-dd')}"></td>
-            </tr>     
+				<tr><td>dhd</td></tr>
+				<tr th:each="quizname, state:${quiznameList}">
+				    <td th:text="${quizname.quiz_id}"></td>
+				    <td><a th:href="@{/getQuizName1(quiz_id=${quizname.quiz_id})}" th:text="${quizname.quiz_title}"></a></td>
+				    <td th:text="${quizname.user_id}"></td>
+				    <td th:text="${#dates.format(quizname.createDate,'yyyy-MM-dd')}"></td>
+				</tr>
         </table>   <br>
         </center>
         <a th:if="${session.user == null}" href="login">퀴즈 만들기</a>
