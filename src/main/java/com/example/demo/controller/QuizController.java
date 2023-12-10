@@ -21,11 +21,6 @@ public class QuizController {
 	@Autowired
     private QuizServiceImpl quizService;
 
-	@GetMapping("/index")
-    public String indexView() {
-        return "index";
-    }
-
     // 글등록 화면으로 이동
     @GetMapping("/insertQuiz")//get방식
     public String insertQuizView() {

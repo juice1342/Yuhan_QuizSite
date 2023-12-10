@@ -1,12 +1,12 @@
 .body_wrapper {
 	margin: 0;
-	padding-top: 37px;
+	padding-top: 68px;
 }
 
 .login_wrapper { 
 	background-color: rgb(255, 255, 255);
 	width:550px;
-	height:450px;
+	height:340px;
 	position:relative;
 	border-radius: 8px;
 	margin:0 auto;

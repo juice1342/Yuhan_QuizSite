@@ -10,12 +10,14 @@
 <body>
 	<div class="top">
 		<a href="/"><img src="/img/플레이퀴즈 로고.png" alt="Play Quiz!" class="logo"></a>
+		<!--
 		<div class="search">
 			<input type="text" id="search_bar" placeholder=" 찾는 퀴즈를 입력하세요">
 			<div class="search_icon">
 				<i class="fas fa-search"></i>
 			</div>
 		</div>
+		-->
 		<b><a th:if="${session.user == null}" class="a_login" href="login">로그인</a></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		<b><a th:if="${session.user != null}" class="a_logout" href="logout">로그아웃</a></b>&nbsp;&nbsp;&nbsp;&nbsp;
 		<b><a class="a_signup" href="signup">회원가입</a></b>
@@ -35,7 +37,9 @@
 			        
 			        <button type="submit" id="login_button">로그인</button>
 			    </form>
-		    </div><hr>
+		    </div>
+		    <!--
+				<hr>
 		    <table>
 				<tr>
 				     <td><p><a class="aa_id" href="/findid">아이디 찾기&nbsp; / </a></p></td>
@@ -43,6 +47,7 @@
 				     <td><p><a class="aa_signup" href="/signup">&nbsp;회원가입</a></p></td>
 				</tr>
 		    </table>
+		    -->
 	    </div>
     </div>
 
