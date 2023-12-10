@@ -27,16 +27,16 @@
 					<th width =70>작성자</th>
 					<th width =200>등록일</th>
 				</tr>
-				<tr><td>dhd</td></tr>
 				<tr th:each="quizname, state:${quiznameList}">
 				    <td th:text="${quizname.quiz_id}"></td>
-				    <td><a th:href="@{/getQuizName1(quiz_id=${quizname.quiz_id})}" th:text="${quizname.quiz_title}"></a></td>
+				    <td><a th:href="@{/getQuizName1(quiz_id=${quizname.quiz_id})}" 
+				    th:text="${quizname.quiz_title}"></a></td>
 				    <td th:text="${quizname.user_id}"></td>
 				    <td th:text="${#dates.format(quizname.createDate,'yyyy-MM-dd')}"></td>
 				</tr>
-        </table>   <br>
-        </center>
+        </table>   <br><br>
         <a href="insertQuiz">퀴즈 만들기</a>
+        </center>
 		</div>
 		<div class="footer">
 			

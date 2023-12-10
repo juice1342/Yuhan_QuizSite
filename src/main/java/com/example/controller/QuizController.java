@@ -20,11 +20,11 @@ import com.example.service.QuizServiceImpl;
 public class QuizController {
 	@Autowired
     private QuizServiceImpl quizService;
-
-	@GetMapping("/index")
-    public String indexView() {
-        return "index";
-    }
+//
+//	@GetMapping("/index")
+//    public String indexView() {
+//        return "index";
+//    }
 
     // 글등록 화면으로 이동
     @GetMapping("/insertQuiz")//get방식
@@ -62,7 +62,9 @@ public class QuizController {
 
         return "forward:getQuizList";
     }
+    
     // 글 리스트
+    
 //    @GetMapping("/getQuizList")
 //    public String getQuizList(Model model) {
 //        List<QuizName> quizNameList = quizService.getQuizNameList();
@@ -73,7 +75,9 @@ public class QuizController {
     
     @RequestMapping("/getQuizNameList")
     public String getQuizNameList(QuizName quizname, Model model) {
-        model.addAttribute("quiznameList", quizService.getQuizNameList(quizname));
+        List<QuizName> quizNameList = quizService.getQuizNameList(quizname);
+        System.out.println("QuizName List in Controller: " + quizNameList);
+        model.addAttribute("quiznameList", quizNameList);
         return "index";
     }
     
@@ -85,20 +89,20 @@ public class QuizController {
         return "getQuiz";
     }
 
-    //글 수정 
-    @PostMapping("/updateQuiz")
-    @Transactional
-    public String updateQuiz(Quiz quiz, QuizName quizname) {
-        quizService.updateQuiz(quiz);
-        quizService.updateQuizName(quizname);
-        return "forward:getQuizList";
-    } 
+//    //글 수정 
+//    @PostMapping("/updateQuiz")
+//    @Transactional
+//    public String updateQuiz(Quiz quiz, QuizName quizname) {
+//        quizService.updateQuiz(quiz);
+//        quizService.updateQuizName(quizname);
+//        return "forward:getQuizList";
+//    } 
 
-    //글 삭제 
-    @GetMapping("/deleteQuiz")
-    public String deleteQuiz(Quiz quiz, QuizName quizname) {
-        quizService.deleteQuiz(quiz);
-        quizService.deleteQuizName(quizname);
-        return "forward:getQuizList";
-    } 
+//    //글 삭제 
+//    @GetMapping("/deleteQuiz")
+//    public String deleteQuiz(Quiz quiz, QuizName quizname) {
+//        quizService.deleteQuiz(quiz);
+//        quizService.deleteQuizName(quizname);
+//        return "forward:getQuizList";
+//    } 
 }

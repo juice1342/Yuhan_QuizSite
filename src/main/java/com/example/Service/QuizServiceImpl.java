@@ -69,16 +69,16 @@ public class QuizServiceImpl {
     }
 
     public QuizName getQuizName(QuizName quizName) {
-        return quizNameRepository.findById(quizName.getQuiz_id()).orElse(null);
+        return quizNameRepository.findById(quizName.getQuiz_id()).get();
     }
 
-//    public List<QuizName> getQuizNameList(QuizName quizname) {
-//        return (List<QuizName>) quizNameRepository.findAll();
-//    }	
-    
     public List<QuizName> getQuizNameList(QuizName quizname) {
-        List<QuizName> quizNameList = (List<QuizName>) quizNameRepository.findAll();
-        System.out.println("QuizName List: " + quizNameList);
-        return quizNameList;
-    }
+        return (List<QuizName>) quizNameRepository.findAll();
+    }	
+    
+//    public List<QuizName> getQuizNameList(QuizName quizname) {
+//        List<QuizName> quizNameList = (List<QuizName>) quizNameRepository.findAll();
+//        System.out.println("QuizName List: " + quizNameList);
+//        return quizNameList;
+//    }
 }
